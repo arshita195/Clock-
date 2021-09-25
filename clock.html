@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+
+        div {
+            margin: 200px auto;
+        }
+        body{
+            background-image: url("https://images.unsplash.com/photo-1630603031775-9f5c6898cbd4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    
+     
+
+    <div id="main">
+        <h1> Current Time And Date is: </h1>
+        <h1 id="h1"> </h1>
+        <h2 id="h2"></h2>
+
+    </div>
+
+    <script>
+        let d = new Date();
+
+        document.getElementById("h2").innerText = d.toDateString();
+
+        setInterval(function time() {
+
+            d = new Date();
+            document.getElementById("h1").innerText = (d.toLocaleTimeString());
+
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
